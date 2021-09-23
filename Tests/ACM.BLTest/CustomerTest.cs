@@ -22,13 +22,35 @@ namespace ACM.BLTest
             _customer.LastName = "Snow";
 
 
-            string expected = "yo yo yo";
+            string expected = "Snow, Jhon";
 
             //act
             string actual = _customer.FullName;
 
             //assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void FullNameFirstNameEmpty()
+        {
+            _customer.FirstName = "Jhon";
+
+            string actual = _customer.FullName;
+            string expected = "Jhon";
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void FullNameLastNameEmpty()
+        {
+            _customer.LastName = "Snow";
+
+            string actual = _customer.FullName;
+            string expected = "Snow";
+
+            Assert.AreEqual(actual, expected);
         }
     }
 }
