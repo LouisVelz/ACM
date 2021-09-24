@@ -11,6 +11,12 @@ namespace ACM.BLTest
         public void SetUp()
         {
             _customer = new Customer();
+            Customer.InstanceCount = 1;
+        }
+        [TearDown]
+        public void TearDown()
+        {
+            Customer.InstanceCount = 0;
         }
 
         [Test]
@@ -22,10 +28,75 @@ namespace ACM.BLTest
             _customer.LastName = "Snow";
 
 
-            string expected = "yo yo yo";
+            string expected = "Snow, Jhon";
 
             //act
             string actual = _customer.FullName;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void FullNameFirstNameEmpty()
+        {
+            _customer.FirstName = "Jhon";
+
+            string actual = _customer.FullName;
+            string expected = "Jhon";
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void FullNameLastNameEmpty()
+        {
+            _customer.LastName = "Snow";
+
+            string actual = _customer.FullName;
+            string expected = "Snow";
+
+            Assert.AreEqual(actual, expected);
+        }
+
+        [Test]
+        public void compareStaticPropertyCount()
+        {
+            //static properties belongs to the class not to the instance of that class.
+            Customer.InstanceCount += 1;
+            Customer.InstanceCount += 1;
+
+            int expected = 3;
+            int actual = Customer.InstanceCount;
+
+            Assert.AreEqual(actual, expected);
+        }
+
+        [Test]
+        public void ValidateCustomerDataTest()
+        {
+            //arrange
+            _customer.FirstName = "customer";
+
+
+            //act
+            var actual = _customer.Validate();
+            bool expected = false;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void ValidateValidCustomerDataTest()
+        {
+            //arrange
+            _customer.FirstName = "customer";
+            _customer.LastName = "valid data";
+
+            //act
+            var actual = _customer.Validate();
+            bool expected = true;
 
             //assert
             Assert.AreEqual(expected, actual);
