@@ -81,10 +81,9 @@ namespace ACM.BLTest
 
             //act
             var actual = _customer.Validate();
-            bool expected = false;
 
             //assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(false, actual);
         }
 
         [Test]
@@ -96,10 +95,9 @@ namespace ACM.BLTest
 
             //act
             var actual = _customer.Validate();
-            bool expected = true;
 
             //assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(true, actual);
         }
     }
 }
