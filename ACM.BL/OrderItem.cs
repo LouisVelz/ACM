@@ -15,7 +15,7 @@ namespace ACM.BL
 
         public bool Validate()
         {
-            bool validate = !(Quantity <= 0);
+            bool validate = !(Quantity <= 0 || Product == null);
 
             return validate;
         }
