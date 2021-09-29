@@ -11,7 +11,7 @@ namespace ACM.BL
         }
         public Guid OrderId { get; private set; } 
         public Customer Customer { get; set; }
-        public DateTime OrderDate { get; set; }
+        public DateTimeOffset? OrderDate { get; set; }
         public string ShippingAddress { get; set; }
         public List<OrderItem> OrderItems { get; set; }
 

@@ -17,7 +17,7 @@ namespace ACM.BL
 
         public string Name { get; set; }
         public string Description { get; set; }
-        public double CurrentPrice { get; set; }
+        public double? CurrentPrice { get; set; }
 
         public bool Validate()
         {
