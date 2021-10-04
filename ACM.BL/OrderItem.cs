@@ -8,13 +8,13 @@ namespace ACM.BL
 {
     public class OrderItem
     {
-        public OrderItem(Guid orderId = new Guid())
+        public OrderItem(int orderId)
         {
             OrderItemId = orderId;
 
         }
 
-        public Guid OrderItemId { get; set; }
+        public int OrderItemId { get; set; }
         public Product Product { get; set; }
         public int Quantity { get; set; }
 
