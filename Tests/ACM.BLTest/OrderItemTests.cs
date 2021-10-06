@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ACM.BL;
+﻿using ACM.BL;
 using NUnit.Framework;
 
 namespace ACM.BLTest
@@ -29,7 +24,7 @@ namespace ACM.BLTest
         }
 
         [Test]
-        public void isValid()
+        public void IsValid()
         {
             
             Assert.GreaterOrEqual(_orderItem.Quantity, 1);
@@ -39,12 +34,12 @@ namespace ACM.BLTest
         [Test]
         public void ValidateFromOrderItem()
         {
-            bool valid = _orderItem.Validate();
+            _orderItem.Validate();
             Assert.IsTrue(_orderItem.Validate());
         }
 
         [Test]
-        public void isPriceDouble()
+        public void IsPriceDouble()
         {
             _orderItem.PurchasePrice = 9.99;
             double num = new double();

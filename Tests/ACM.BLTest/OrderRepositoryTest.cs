@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ACM.BL;
 using ACM.BL.Persistence;
 using NUnit.Framework;
@@ -18,7 +15,7 @@ namespace ACM.BLTest
         public void SetUp()
         {
             _orderRepository = new OrderRepository();
-            _order = new Order(1)
+            _order = new Order()
             {
                 Customer = new Customer(1),
                 OrderDate = new DateTimeOffset(),

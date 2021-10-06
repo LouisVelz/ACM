@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BL.Persistence
 {
@@ -18,7 +15,7 @@ namespace ACM.BL.Persistence
 
         public Order Retrieve(int orderId)
         {
-            var order = new Order(1)
+            var order = new Order()
             {
                 Customer = new Customer(1),
                 OrderDate = new DateTimeOffset(),

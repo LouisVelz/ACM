@@ -60,7 +60,7 @@ namespace ACM.BLTest
         }
 
         [Test]
-        public void compareStaticPropertyCount()
+        public void CompareStaticPropertyCount()
         {
             //static properties belongs to the class not to the instance of that class.
             Customer.InstanceCount += 1;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using ACM.BL;
 using ACM.BL.Persistence;
 using NUnit.Framework;
@@ -21,7 +17,7 @@ namespace ACM.BLTest
         }
 
         [Test]
-        public void retrievesProduct()
+        public void RetrievesProduct()
         {
             //arrange
             var expected = new Product(1);
@@ -34,7 +30,7 @@ namespace ACM.BLTest
         }
 
         [Test]
-        public void retrievesListOfProducts()
+        public void RetrievesListOfProducts()
         {
             List<Product> listOfProducts = _productRepository.Retrieve();
             List<Product> otherList = new List<Product>();
