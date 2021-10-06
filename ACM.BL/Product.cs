@@ -39,7 +39,7 @@ namespace ACM.BL
         {
             //write code to retrieve using a Guid
 
-            return new Product();
+            return new Product(1);
         }
 
         public bool Save(Product product)

@@ -16,7 +16,7 @@ namespace ACM.BLTest
         [SetUp]
         public void SetUp()
         {
-            _product = new Product();
+            _product = new Product(1);
         }
 
         [TearDown]
