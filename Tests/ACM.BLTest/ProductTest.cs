@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ACM.BL;
+﻿using ACM.BL;
 using NUnit.Framework;
 
 namespace ACM.BLTest
@@ -26,7 +21,7 @@ namespace ACM.BLTest
         }
 
         [Test]
-        public void hasValidData()
+        public void HasValidData()
         {
             _product.Name = "Vans";
             _product.CurrentPrice = 9.99;
@@ -36,7 +31,7 @@ namespace ACM.BLTest
         }
 
         [Test]
-        public void hasInvalidData()
+        public void HasInvalidData()
         {
 
             _product.Description = "Vans skating sneakers";
