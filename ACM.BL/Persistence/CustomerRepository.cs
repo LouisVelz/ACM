@@ -12,16 +12,16 @@ namespace ACM.BL.Persistence
         {
             //code that retrieves customer
 
-            Customer customer = new Customer(1);
-
-            if (customerId == 1)
+            Customer customer = new Customer(1)
             {
-                customer.EmailAddress = "JohnSnow@email.me";
-                customer.FirstName = "John";
-                customer.LastName = "Snow";
-            }
+                EmailAddress = "JohnSnow@email.me",
+                FirstName = "John",
+                LastName = "Snow"
+            };
 
-            return customer;
+            if (customerId == 1) return customer;
+
+            return new Customer(2);
         }
 
         public bool Save(Customer customer)

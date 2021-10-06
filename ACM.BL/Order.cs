@@ -25,25 +25,5 @@ namespace ACM.BL
             return isValid;
         }
 
-        public List<Order> Retrieve()
-        {
-            List<Order> list = new List<Order>();
-
-            //write functionality to return all orders
-            return list;
-        }
-        
-        public Order Retrieve(int orderId)
-        {
-            //write functionality to return all orders
-            return new Order();
-        }
-
-        public bool Save(Order order)
-        {
-            //write code to save order
-
-            return true;
-        }
     }
 }
