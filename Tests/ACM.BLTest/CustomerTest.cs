@@ -10,7 +10,7 @@ namespace ACM.BLTest
         [SetUp]
         public void SetUp()
         {
-            _customer = new Customer();
+            _customer = new Customer(2);
             Customer.InstanceCount = 1;
         }
         [TearDown]

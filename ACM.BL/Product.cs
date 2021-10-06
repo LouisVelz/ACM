@@ -5,12 +5,12 @@ namespace ACM.BL
 {
     public class Product
     {
-        public Product(Guid productId= new Guid())
+        public Product(int productId)
         {
             ProductId = productId;
         }
 
-        public Guid ProductId {
+        public int ProductId {
             get;
             private set;
         }

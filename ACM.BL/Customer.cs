@@ -6,12 +6,12 @@ namespace ACM.BL
     public class Customer
     {
 
-        public Customer(Guid customerId = new Guid())
+        public Customer(int customerId)
         {
             CustomerId = customerId;
         }
 
-        public Guid CustomerId
+        public int CustomerId
         {
             get;
             private set;
@@ -50,28 +50,5 @@ namespace ACM.BL
             return isValid;
         }
 
-        public Customer Retrieve(int customerId)
-        {
-            //code that retrieves customer
-
-            return new Customer();
-        }
-
-        public bool Save(Customer customer)
-        {
-            //code that saves customer
-
-            return true;
-        }
-
-        //this method is overloading
-        //meaning it is the same as the retrieve but they will be called according
-        //to the parameters passed when they are called.
-        public List<Customer> Retrieve()
-        {
-            //code that retrieves all customers
-
-            return new List<Customer>();
-        }
     }
 }

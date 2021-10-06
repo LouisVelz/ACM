@@ -5,11 +5,11 @@ namespace ACM.BL
 {
     public class Order
     {
-        public Order(Guid orderId = new Guid())
+        public Order(int orderId=1)
         {
             OrderId = orderId;
         }
-        public Guid OrderId { get; private set; } 
+        public int OrderId { get; private set; } 
         public Customer Customer { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
         public string ShippingAddress { get; set; }
@@ -33,7 +33,7 @@ namespace ACM.BL
             return list;
         }
         
-        public Order Retrieve(Guid orderId)
+        public Order Retrieve(int orderId)
         {
             //write functionality to return all orders
             return new Order();
