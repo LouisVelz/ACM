@@ -38,7 +38,7 @@ namespace ACM.BL
 
         public OrderItem Retrieve(Product product)
         {
-            OrderItem orderItem = new OrderItem();
+            OrderItem orderItem = new OrderItem(1);
 
             //write code to retrieve order from product guid
 

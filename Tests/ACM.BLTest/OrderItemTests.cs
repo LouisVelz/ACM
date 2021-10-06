@@ -16,9 +16,9 @@ namespace ACM.BLTest
         [SetUp]
         public void SetUp()
         {
-            _product = new Product();
-            _orderItem = new OrderItem();
-            _orderItem.Product = new Product();
+            _product = new Product(1);
+            _orderItem = new OrderItem(1);
+            _orderItem.Product = new Product(1);
             _orderItem.Quantity = 5;
         }
 

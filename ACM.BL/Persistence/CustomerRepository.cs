@@ -38,7 +38,12 @@ namespace ACM.BL.Persistence
         {
             //code that retrieves all customers
 
-            return new List<Customer>();
+            return new List<Customer>()
+            {
+                 new Customer(1),
+                 new Customer(2),
+
+            };
         }
     }
 }
