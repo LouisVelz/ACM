@@ -1,12 +1,19 @@
 ﻿
+using System.Collections.Generic;
+
 namespace ACM.BL
 {
     public class Customer
     {
+        public Customer() : this(0)
+        {
+            //composition, a constructor calling the other constructor.
+        }
 
         public Customer(int customerId)
         {
             CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
         public int CustomerId
@@ -36,6 +43,8 @@ namespace ACM.BL
             }
         }
 
+        public List<Address> AddressList { get; set; }
+        
         public static int InstanceCount { get; set; }
 
         public bool Validate()
