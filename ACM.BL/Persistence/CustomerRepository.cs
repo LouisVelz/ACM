@@ -1,9 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ACM.BL.Persistence
 {
     public class CustomerRepository
     {
+        public CustomerRepository()
+        {
+            AddressRepository = new AddressRepository();
+        }
+        
+        public AddressRepository AddressRepository { get; set; }
         public Customer Retrieve(int customerId)
         {
             //code that retrieves customer
@@ -12,7 +19,8 @@ namespace ACM.BL.Persistence
             {
                 EmailAddress = "JohnSnow@email.me",
                 FirstName = "John",
-                LastName = "Snow"
+                LastName = "Snow",
+                AddressList = AddressRepository.RetrieveByCustomerId(customerId).ToList()
             };
 
             if (customerId == 1) return customer;

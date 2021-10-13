@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL.Persistence
 {
-    class AddressRepository
+    public class AddressRepository
     {
 
         public Address Retrieve(int addressId)
@@ -25,6 +25,41 @@ namespace ACM.BL.Persistence
             }
 
             return address;
+        }
+
+        public IEnumerable<Address> RetrieveByCustomerId(int customerId)
+        {
+            var addressList = new List<Address>()
+            {
+                new Address(1)
+                {
+                    AddressType = 1,
+                    StreetLine1 = "Bag End",
+                    StreetLine2 = "Bagshot row",
+                    City = "Hobbiton",
+                    State = "Shite",
+                    County = "Middle Earth",
+                    PostalCode = "11212",
+                },
+                new Address(2)
+                {
+                    AddressType = 2,
+                    StreetLine1 = "Green Dragon",
+                    City = "Bywater",
+                    State = "Shire",
+                    County = "Middle Earth",
+                    PostalCode = "11212",
+                }
+            };
+
+            return addressList;
+        }
+
+        public bool Save(Address address)
+        {
+            //code to retrieve
+
+            return true;
         }
     }
 }
