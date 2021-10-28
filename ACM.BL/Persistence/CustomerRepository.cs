@@ -1,27 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM.BL.Persistence
 {
     public class CustomerRepository
     {
+        public CustomerRepository()
+        {
+            AddressRepository = new AddressRepository();
+        }
+        
+        public AddressRepository AddressRepository { get; set; }
         public Customer Retrieve(int customerId)
         {
             //code that retrieves customer
 
-            Customer customer = new Customer(1);
-
-            if (customerId == 1)
+            Customer customer = new Customer(1)
             {
-                customer.EmailAddress = "JohnSnow@email.me";
-                customer.FirstName = "John";
-                customer.LastName = "Snow";
-            }
+                EmailAddress = "JohnSnow@email.me",
+                FirstName = "John",
+                LastName = "Snow",
+                AddressList = AddressRepository.RetrieveByCustomerId(customerId).ToList()
+            };
 
-            return customer;
+            if (customerId == 1) return customer;
+
+            return new Customer(2);
         }
 
         public bool Save(Customer customer)

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 namespace ACM.BL
 {
     public class Product : EntityBase
@@ -28,25 +26,5 @@ namespace ACM.BL
             return isValid;
         }
 
-        public static List<Product> Retrieve()
-        {
-            //write code to retrieve all;
-
-            return new List<Product>();
-        }
-
-        public static Product Retrieve(Guid productId)
-        {
-            //write code to retrieve using a Guid
-
-            return new Product(1);
-        }
-
-        public bool Save(Product product)
-        {
-            //write code to save
-
-            return true;
-        }
     }
 }
