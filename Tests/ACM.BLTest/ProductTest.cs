@@ -25,7 +25,7 @@ namespace ACM.BLTest
         {
             _product.ProductName = "Vans";
             _product.CurrentPrice = 9.99;
-            _product.Description = "Vans skating sneakers";
+            _product.ProductDescription = "Vans skating sneakers";
 
             Assert.AreEqual(true, _product.Validate());
         }
@@ -34,7 +34,7 @@ namespace ACM.BLTest
         public void HasInvalidData()
         {
 
-            _product.Description = "Vans skating sneakers";
+            _product.ProductDescription = "Vans skating sneakers";
             Assert.AreEqual(false, _product.Validate());
         }
 

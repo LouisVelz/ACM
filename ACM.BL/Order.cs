@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase, ILoggable
     {
         public Order() : this(0)
         {
@@ -22,7 +23,7 @@ namespace ACM.BL
         public int CustomerID { get; set; }
         public int ShippingAddressId { get; set; }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (!string.IsNullOrWhiteSpace(ShippingAddress)) isValid = false;
@@ -32,5 +33,6 @@ namespace ACM.BL
             return isValid;
         }
 
+        public string Log() => $"{OrderId}: Date {this.OrderDate.Value.Date} Status: {this.EntityState.ToString()}";
     }
 }

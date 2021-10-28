@@ -18,7 +18,7 @@ namespace ACM.BL.Persistence
             var product = new Product(1)
             {
                 ProductName = "Product",
-                Description = "Vans shoes",
+                ProductDescription = "Vans shoes",
                 CurrentPrice = 9.99
             };
             Object myObject = new Object();

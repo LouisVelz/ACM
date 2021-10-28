@@ -5,7 +5,7 @@ using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product(int productId)
         {
@@ -21,13 +21,10 @@ namespace ACM.BL
 
         public string ProductName
         {
-            get
-            {
-                return _productName.InsertSpaces();
-            }
+            get => _productName.InsertSpaces();
             set => _productName = value;
         }
-        public string Description { get; set; }
+        public string ProductDescription { get; set; }
         public double? CurrentPrice { get; set; }
 
         public override bool Validate()
@@ -39,5 +36,6 @@ namespace ACM.BL
             return isValid;
         }
 
+        public string Log() =>  $"{ProductId}: {ProductName} Detail: {ProductDescription} Status: { EntityState.ToString()}";
     }
 }
