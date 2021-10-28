@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product(int productId)
         {
@@ -19,7 +19,7 @@ namespace ACM.BL
         public string Description { get; set; }
         public double? CurrentPrice { get; set; }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = !string.IsNullOrEmpty(Name);
 
