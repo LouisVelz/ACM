@@ -5,12 +5,12 @@ namespace Acme.CommonTest
 {
     public class StringHandlerTest
     {
-        private StringHandler _stringHandler;
+
 
         [SetUp]
         public void Setup()
         {
-            _stringHandler = new StringHandler();
+
         }
 
         [Test]
@@ -20,7 +20,7 @@ namespace Acme.CommonTest
             var source = "SonicScrewdriver";
             var expected = "Sonic Screwdriver";
 
-            var actual = _stringHandler.InsertSpaces(source);
+            var actual = StringHandler.InsertSpaces(source);
 
             Assert.AreEqual( expected, actual);
         }
@@ -32,7 +32,7 @@ namespace Acme.CommonTest
             var source = "Sonic Screwdriver";
             var expected = "Sonic Screwdriver";
 
-            var actual = _stringHandler.InsertSpaces(source);
+            var actual = StringHandler.InsertSpaces(source);
 
             Assert.AreEqual(expected, actual);
         }

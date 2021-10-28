@@ -17,7 +17,7 @@ namespace ACM.BL.Persistence
             //write code to retrieve using a Guid
             var product = new Product(1)
             {
-                Name = "Product",
+                ProductName = "Product",
                 Description = "Vans shoes",
                 CurrentPrice = 9.99
             };
