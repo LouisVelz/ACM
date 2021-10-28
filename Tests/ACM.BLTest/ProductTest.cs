@@ -23,7 +23,7 @@ namespace ACM.BLTest
         [Test]
         public void HasValidData()
         {
-            _product.Name = "Vans";
+            _product.ProductName = "Vans";
             _product.CurrentPrice = 9.99;
             _product.Description = "Vans skating sneakers";
 

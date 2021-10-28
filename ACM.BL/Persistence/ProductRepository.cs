@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ACM.BL.Persistence
 {
@@ -16,11 +17,13 @@ namespace ACM.BL.Persistence
             //write code to retrieve using a Guid
             var product = new Product(1)
             {
-                Name = "Product",
+                ProductName = "Product",
                 Description = "Vans shoes",
                 CurrentPrice = 9.99
             };
-
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
             return productId == 1 ? product : new Product(2);
         }
 

@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BL", "ACM.BL\ACM.BL.csproj", "{96301183-E21D-469F-8422-45CDDBBEDE9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACM.BL", "ACM.BL\ACM.BL.csproj", "{96301183-E21D-469F-8422-45CDDBBEDE9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02323F41-D4E1-41B2-914E-E081187F6651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "Tests\ACM.BLTest\ACM.BLTest.csproj", "{C69566C3-A604-4FE3-B8EA-01D07FC16CE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACM.BLTest", "Tests\ACM.BLTest\ACM.BLTest.csproj", "{C69566C3-A604-4FE3-B8EA-01D07FC16CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common", "Acme.Common\Acme.Common.csproj", "{4CB1B739-B5F8-4ACB-A23D-63E637A9C036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CommonTest", "Tests\Acme.CommonTest\Acme.CommonTest.csproj", "{B1D08B24-FA60-4876-A85D-A566E2333E04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,16 +27,28 @@ Global
 		{C69566C3-A604-4FE3-B8EA-01D07FC16CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C69566C3-A604-4FE3-B8EA-01D07FC16CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C69566C3-A604-4FE3-B8EA-01D07FC16CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB1B739-B5F8-4ACB-A23D-63E637A9C036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB1B739-B5F8-4ACB-A23D-63E637A9C036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB1B739-B5F8-4ACB-A23D-63E637A9C036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB1B739-B5F8-4ACB-A23D-63E637A9C036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D08B24-FA60-4876-A85D-A566E2333E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D08B24-FA60-4876-A85D-A566E2333E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D08B24-FA60-4876-A85D-A566E2333E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D08B24-FA60-4876-A85D-A566E2333E04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C69566C3-A604-4FE3-B8EA-01D07FC16CE5} = {02323F41-D4E1-41B2-914E-E081187F6651}
+		{B1D08B24-FA60-4876-A85D-A566E2333E04} = {02323F41-D4E1-41B2-914E-E081187F6651}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2E9F1A7-724B-411A-A7CA-C736096920BF}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
-		$0.TextStylePolicy = $1
+		$0.TextStylePolicy = $4
 		$1.FileWidth = 80
 		$1.TabsToSpaces = True
 		$1.scope = text/x-csharp
@@ -40,13 +56,9 @@ Global
 		$2.scope = text/x-csharp
 		$0.DotNetNamingPolicy = $3
 		$3.DirectoryNamespaceAssociation = PrefixedHierarchical
-		$0.TextStylePolicy = $4
 		$4.FileWidth = 80
 		$4.TabsToSpaces = True
 		$4.scope = text/plain
 		$0.StandardHeader = $5
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C69566C3-A604-4FE3-B8EA-01D07FC16CE5} = {02323F41-D4E1-41B2-914E-E081187F6651}
 	EndGlobalSection
 EndGlobal
